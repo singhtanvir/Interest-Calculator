@@ -27,7 +27,7 @@ public void mainMenu() {
 		retry();
 	}
 	else {
-	System.out.println("Enter the number of days: ");
+	System.out.println("Enter the number of days in months: ");
 	noOfDays = keyboardInput.nextInt();
 	
 if(getNoOfDays()<0) {
@@ -35,70 +35,95 @@ if(getNoOfDays()<0) {
 }
 else {
 
-	if(getNoOfDays()>=6 && getNoOfDays()<=6) {
+	if(getNoOfDays()==6) {
 		
 	System.out.println("Enter your age: ");
 	ageOfACHolder = keyboardInput.nextInt();
 	if(getAgeOfACHolder()<60) {
 		setInterestRate(7.50);
 	}
-	else {
+	if(getAgeOfACHolder()>60){
 		setInterestRate(8.00);
 	}
+	if(getAgeOfACHolder()<0) {
+		System.out.println("Please enter a non-negative value");
+		retry();
+	}
 }
-	else if(getNoOfDays()>=9 && getNoOfDays()<=9) {
+	else if(getNoOfDays()==9) {
 		
 		System.out.println("Enter your age: ");
 		ageOfACHolder = keyboardInput.nextInt();
 		if(getAgeOfACHolder()<60) {
 			setInterestRate(7.75);
 		}
-		else {
+		if(getAgeOfACHolder()>60){
 			setInterestRate(8.25);
 		}
+		if(getAgeOfACHolder()<0) {
+			System.err.println("Please enter a non-negative value");
+			retry();
+		}
 	}
-	else if(getNoOfDays()>=12 && getNoOfDays()<=12) {
+	else if(getNoOfDays()==12) {
 		
 		System.out.println("Enter your age: ");
 		ageOfACHolder = keyboardInput.nextInt();
 		if(getAgeOfACHolder()<60) {
 			setInterestRate(8.00);
 		}
-		else {
+		if(getAgeOfACHolder()>60){
 			setInterestRate(8.50);
 		}
+		if(getAgeOfACHolder()<0) {
+			System.err.println("Please enter a non-negative value");
+			retry();
+		}
 	}
-	else if(getNoOfDays()>=15 && getNoOfDays()<=15) {
+	else if(getNoOfDays()==15) {
 		
 		System.out.println("Enter your age: ");
 		ageOfACHolder = keyboardInput.nextInt();
 		if(getAgeOfACHolder()<60) {
 			setInterestRate(8.25);
 		}
-		else {
+		if(getAgeOfACHolder()>60){
 			setInterestRate(8.75);
 		}
+		if(getAgeOfACHolder()<0) {
+			System.err.println("Please enter a non-negative value");
+			retry();
+		}
 	}
-	else if(getNoOfDays()>=18 && getNoOfDays()<=18) {
+	else if(getNoOfDays()==18) {
 		
 		System.out.println("Enter your age: ");
 		ageOfACHolder = keyboardInput.nextInt();
 		if(getAgeOfACHolder()<60) {
 			setInterestRate(8.50);
 		}
-		else {
+		if(getAgeOfACHolder()>60){
 			setInterestRate(9.00);
 		}
+		if(getAgeOfACHolder()<0) {
+			System.err.println("Please enter a non-negative value");
+			retry();
+		}
 	}
-	else if(getNoOfDays()>=21 && getNoOfDays()<=21) {
+	else if(getNoOfDays()==21) {
 		
 		System.out.println("Enter your age: ");
 		ageOfACHolder = keyboardInput.nextInt();
 		if(getAgeOfACHolder()<60) {
 			setInterestRate(8.75);
 		}
-		else {
+		if(getAgeOfACHolder()>60){
 			setInterestRate(9.25);
+		}
+		if(getAgeOfACHolder()<0) {
+			System.err.println("Please enter a non-negative value");
+			System.out.println("");
+			retry();
 		}
 	}
 	calculateInterest();

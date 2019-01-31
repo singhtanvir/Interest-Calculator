@@ -33,8 +33,26 @@ do{
 		break;
 	case 4:
 		System.exit(0);
+		break;
+	default:
+		retry();
+		
 	}
 }while(choice!=1 || choice!=2 || choice!=3 ||choice!=4);
+}
+public void retry() {
+	System.out.println("Invalid choice entered! Press Y|y to Retry or N|n to Exit: ");
+	String choice = keyboardInput.next();
+	switch(choice) {
+	case "Y":
+	case "y":
+		mainMenu();
+		break;
+		
+	case "N":
+	case "n":
+		System.exit(0);
+	}
 }
 public static void main(String[] args) {
 	try{
